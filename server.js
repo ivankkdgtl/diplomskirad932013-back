@@ -11,10 +11,8 @@ const slika = require('./kontroleri/slika');
 const db = knex({
   client: 'pg',
   connection: {
-    host : 'postgresql-colorful-40636',
-    user : 'postgres',
-    password : 'test',
-    database : 'finaldb'
+    host : process.env.DATABASE_URL,
+    ssl : true
   }
 });
 
