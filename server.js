@@ -29,6 +29,6 @@ app.post('/registracija', (req, res) => { registracija.registruj(req, res, db, b
 app.put('/slika', (req, res) => { slika.brUpita(req, res, db)})
 app.post('/urlslike', (req, res) => { slika.apiPoziv(req, res)})
 
-app.listen(3001, ()=> {
-  console.log('Aplikacija je lajv na portu 3001');
+app.listen(process.env.PORT || 3000, ()=> {
+  console.log(`Aplikacija je lajv na portu 3001 ${process.env.PORT}`);
 })
